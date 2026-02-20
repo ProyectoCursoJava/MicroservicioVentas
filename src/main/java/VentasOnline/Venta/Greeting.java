@@ -11,5 +11,6 @@ public class Greeting {
     private String message;
     private int age;
     private String sex;
+    private String color;
 
 }

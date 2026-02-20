@@ -13,7 +13,7 @@ public class GreetingController {
     private static final String template = "Hello %s";
     /** Metodo que devuelve datos de la clase Greeting */
     @GetMapping
-    public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name, @RequestParam(value = "age", defaultValue = "0") int age, @RequestParam(value = "sex", defaultValue = "?") String sex){
-        return new Greeting(counter.incrementAndGet(), String.format(template,name),age, sex);
+    public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name, @RequestParam(value = "age", defaultValue = "0") int age, @RequestParam(value = "sex", defaultValue = "?") String sex, @RequestParam(value = "color", defaultValue = "ninguno") String color){
+        return new Greeting(counter.incrementAndGet(), String.format(template,name),age, sex,color);
     }
 }
