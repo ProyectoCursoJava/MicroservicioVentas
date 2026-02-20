@@ -16,4 +16,8 @@ public class GreetingController {
     public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name, @RequestParam(value = "age", defaultValue = "0") int age, @RequestParam(value = "sex", defaultValue = "?") String sex){
         return new Greeting(counter.incrementAndGet(), String.format(template,name),age, sex);
     }
+
+    private String getSaludo(String name){
+        return String.format(template,name);
+    }
 }
