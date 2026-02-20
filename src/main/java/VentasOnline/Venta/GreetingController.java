@@ -11,6 +11,7 @@ import java.util.concurrent.atomic.AtomicLong;
 public class GreetingController {
     private final AtomicLong counter = new AtomicLong();
     private static final String template = "Hello %s";
+    /** Metodo que devuelve datos de la clase Greeting */
     @GetMapping
     public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name, @RequestParam(value = "age", defaultValue = "0") int age, @RequestParam(value = "sex", defaultValue = "?") String sex){
         return new Greeting(counter.incrementAndGet(), String.format(template,name),age, sex);
